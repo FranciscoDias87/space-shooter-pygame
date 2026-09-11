@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Shooter - Aula de Programação</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <span class="badge">Projeto didático • Python + lógica de jogos</span>
+      <h1>SPACE SHOOTER</h1>
+      <p>
+        Uma demonstração rápida para despertar a curiosidade antes da aula.
+        Depois, vamos construir a lógica do jogo passo a passo em Python.
+      </p>
+    </section>
+
+    <section class="game-shell" aria-label="Jogo Space Shooter">
+      <div class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Pontuação</span>
+          <strong id="score">0</strong>
+        </div>
+
+        <div class="hud-title">SPACE SHOOTER</div>
+
+        <div class="hud-item lives">
+          <span class="hud-label">Vidas</span>
+          <strong id="lives">❤ ❤ ❤</strong>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="480" height="640"></canvas>
+
+        <div id="overlay" class="overlay visible">
+          <div class="overlay-card">
+            <p class="eyebrow">Missão de treinamento</p>
+            <h2 id="overlayTitle">PRONTO PARA DECOLAR?</h2>
+            <p id="overlayText">
+              Use as setas ou A/D para mover a nave e a barra de espaço para atirar.
+            </p>
+            <button id="startButton" type="button">INICIAR JOGO</button>
+            <small>Enter também inicia • P pausa</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls" aria-label="Controles do jogo">
+        <button data-control="left" aria-label="Mover para esquerda">◀</button>
+        <button data-control="shoot" class="shoot" aria-label="Atirar">●</button>
+        <button data-control="right" aria-label="Mover para direita">▶</button>
+      </div>
+    </section>
+
+    <section class="lesson-hook">
+      <h2>O segredo por trás do jogo</h2>
+      <p>
+        Tudo o que você está vendo aqui pode ser explicado com poucos conceitos:
+        <strong>variáveis, coordenadas X e Y, if, while, eventos, colisões e pontuação.</strong>
+      </p>
+      <p class="challenge">
+        Pergunta para a turma: <strong>como o computador sabe que o tiro acertou o inimigo?</strong>
+      </p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
